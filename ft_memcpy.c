@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 11:57:45 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:01:10 by acombier         ###   ########lyon.fr   */
+/*   Created: 2025/11/06 14:52:31 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/09 12:03:17 by acombier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
+#include <string.h>
 
-int	ft_isascii(char c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= 0 && c <= 127)
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		return (1);
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		i++;
 	}
-	return (0);
+	return (dest);
 }
+
+/*int	main(void)
+{
+	char	src[] = "Hello world !";
+	char	dest[100];
+
+	printf("%s", ft_memcpy(dest, src, 5));
+
+	return (0);
+}*/

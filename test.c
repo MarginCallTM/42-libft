@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 16:43:43 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 11:59:03 by acombier         ###   ########lyon.fr   */
+/*   Created: 2025/11/09 12:55:48 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/09 13:01:26 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned char	*ptr;
-	size_t		i;
+	size_t	i;
+	size_t len;
 
-	*ptr = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	len = 0;
+
+	while(src[len])
 	{
-		ptr[i] = 0;
+		len++;
+	}
+	if(size == 0)
+		return (len);
+	while(src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+
+	return (len);
 }
 
-/*int main(void)
+int main(void)
 {
-	int     i;
+		char	dest[30] = "Hello world";
+	char	src[30] = "This is my town";
 
-	i = 0;
-	
-	char buffer[10] = "123456789";
-	ft_bzero(buffer, 5);
-	
-	while(i < 10)
-	{
-	   printf("byte[%d] = 0x%02x\n", i, (unsigned char)buffer[i]);
-		i++;
-	}
-	
-}*/
+	ft_strlcpy(dest, src, 50);
+
+	printf("%s", dest);
+	return (0);
+}

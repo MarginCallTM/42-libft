@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:11:07 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/05 12:12:50 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/09 12:10:08 by acombier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strlen(char *str)
 
 	i = 0;
 
-	while(str[i])
+	while (str[i])
 	{
 		i++;
 	}
@@ -26,8 +26,8 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int main(void)
+/*int main(void)
 {
 	printf("%d", ft_strlen("Hello"));
 	return (0);
-}
+}*/

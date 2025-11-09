@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 11:57:45 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:01:10 by acombier         ###   ########lyon.fr   */
+/*   Created: 2025/11/09 13:07:32 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/09 13:12:03 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_isascii(char c)
+unsigned int	ft_strlcat(char	*dest, char *src, unsigned int size)
 {
-	if (c >= 0 && c <= 127)
+	int	i;
+	unsigned	int j;
+	unsigned	int len;
+
+	i = 0;
+	j = 0;
+	len = 0;
+
+	while(dest[i])
 	{
-		return (1);
+		len++;
+		i++;
 	}
-	return (0);
+	if(size < len || size == 0)
+	{
+		return (0);
+	}
+	while(j < (size - len - 1))
+	{
+		dest[i] = src[i];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
+	return (len + j);
 }
+
