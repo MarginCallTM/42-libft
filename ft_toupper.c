@@ -3,20 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 13:26:26 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 10:05:46 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/10 17:08:35 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int ft_toupper(int c)
 {
@@ -30,6 +25,5 @@ int ft_toupper(int c)
 
 int main(void)
 {
-	;
-	printf("%d", ft_toupper('g'));
+	ft_toupper('g');
 }

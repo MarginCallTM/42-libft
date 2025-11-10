@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:48:30 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 11:59:53 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 17:05:50 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	printf("%d", ft_isalnum('w'));
 	return (0);
-}*/
+}

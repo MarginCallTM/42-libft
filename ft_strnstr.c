@@ -3,35 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:35:51 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 14:58:38 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/10 17:57:05 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strnstr(const char *little , const char *big , size_t  len)
+char *ft_strnstr(const char *big , const char *little , size_t  len)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
-	j = 0;
-	
-	unsigned char *s1;
-	unsigned char *s2;
-
-	s1 = (unsigned char *)little;
-	s2 = (unsigned char *)big;
-
-	if(!s1)
+	if(little[0] == '\0')
+		return((char *)big);
+	while(i < len && big[i])
 	{
-		return (big);
+		j = 0;
+		while(i < len && big[i + j] == little[j])
+		{
+			j++;
+		}
+		if(little[j] == '\0')
+		{
+			return((char *)&big[i]);
+		}
+		i++;
 	}
-	while()
-
+	return (NULL);
 }
 
 int main(void)
@@ -39,5 +41,5 @@ int main(void)
 	char	little[] = "my";
 	char	big[] = "Welcome to my world";
 
-	printf("%s", ft_strnstr(little, big, 14));
+	printf("%s", ft_strnstr(big, little, 18));
 }

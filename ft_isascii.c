@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:57:45 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:01:10 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 17:08:37 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
 int	ft_isascii(char c)
 {
@@ -18,5 +18,11 @@ int	ft_isascii(char c)
 	{
 		return (1);
 	}
+	return (0);
+}
+
+int main(void)
+{
+	ft_isascii('B');
 	return (0);
 }

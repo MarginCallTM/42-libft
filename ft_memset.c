@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:13:07 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/07 08:39:44 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:06:41 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	*ft_memset(void *str, int c, size_t n)
 int main(void)
 {
     char    str[] = "Hello my friends";
-    printf("%s", ft_memset(str, '#' , 4));
+    printf("%s", (char *)ft_memset(str, '#', 4));
     return (0);
 }

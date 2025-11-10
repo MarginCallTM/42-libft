@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:43:43 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 11:59:03 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 18:46:59 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*ptr;
 	size_t		i;
 
-	*ptr = (unsigned char *)s;
+	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -27,7 +27,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-/*int main(void)
+int main(void)
 {
 	int     i;
 
@@ -42,4 +42,4 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 	
-}*/
+}
