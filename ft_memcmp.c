@@ -1,48 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 12:55:48 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 13:01:26 by acombier         ###   ########.fr       */
+/*   Created: 2025/11/10 13:44:57 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/10 14:28:49 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlcpy(char *dest, const char *src, size_t size)
+int ft_memcmp( const void *ptr1, const void *ptr2, size_t size )
 {
 	size_t	i;
-	size_t len;
 
 	i = 0;
-	len = 0;
 
-	while(src[len])
+	unsigned char *p1;
+	unsigned char *p2;
+
+	p1 = (unsigned char *)ptr1;
+	p2 = (unsigned char *)ptr2;
+
+	while(i < size)
 	{
-		len++;
-	}
-	if(size == 0)
-		return (len);
-	while(src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
+		if(p1[i] != p2[i])
+		{
+			return (p1[i] - p2[i]);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-
-	return (len);
+	return (0);
 }
+
 
 int main(void)
 {
-		char	dest[30] = "Hello world";
-	char	src[30] = "This is my town";
+    int ptr1 [] = { 52, 85, 20, 63, 21 };
+    int ptr2 [] = { 54, 85, 20, 63, 21 };
 
-	ft_strlcpy(dest, src, 50);
-
-	printf("%s", dest);
-	return (0);
+	printf("%i", ft_memcmp(ptr1, ptr2, 5 * sizeof(int)));
 }

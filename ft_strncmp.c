@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 13:07:32 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 10:09:23 by acombier         ###   ########.fr       */
+/*   Created: 2025/11/10 11:50:51 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/10 12:00:23 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char	*dest, char *src, unsigned int size)
+#include <stdio.h>
+#include <unistd.h>
+
+int ft_strncmp( const char *s1, const char *s2, size_t length )
 {
-	int	i;
-	unsigned	int j;
-	unsigned	int len;
-
+	size_t	i;
 	i = 0;
-	j = 0;
-	len = 0;
 
-	while(dest[i])
+	while(s1[i] == s2[i] && i < length && s1[i] != '\0')
 	{
-		len++;
 		i++;
 	}
-	if(size < len || size == 0)
+	if(i == length)
 	{
 		return (0);
 	}
-	while(j < (size - len - 1))
-	{
-		dest[i] = src[i];
-		j++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (len + j);
+
+	return (s1[i] - s2[i]);
 }
 
-int main()
+int main(void)
 {
-	
-}
+	char	s1[] = "Hello";
+	char	s2[] = "hello";
 
+	printf("%d", ft_strncmp(s1 , s2, 1));
+}

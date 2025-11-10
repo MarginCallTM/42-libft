@@ -1,46 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 13:07:32 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 10:09:23 by acombier         ###   ########.fr       */
+/*   Created: 2025/11/10 11:33:38 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/10 11:43:52 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char	*dest, char *src, unsigned int size)
+#include <stdio.h>
+
+char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
-	unsigned	int j;
-	unsigned	int len;
 
 	i = 0;
-	j = 0;
-	len = 0;
-
-	while(dest[i])
+	if(c == '\0')
 	{
-		len++;
+		return ((char *)(str + i));
+	}
+	while(str[i])
+	{
 		i++;
 	}
-	if(size < len || size == 0)
+	while(i >= 0)
 	{
-		return (0);
+		if(str[i] == (char)c)
+		{
+			return ((char *)(str + i));
+		}
+		i--;
 	}
-	while(j < (size - len - 1))
-	{
-		dest[i] = src[i];
-		j++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (len + j);
+	return(NULL);
 }
 
-int main()
+int main(void)
 {
-	
-}
+	char	str[] = "Hello world";
+	char	c = 'e';
 
+	printf("%s", ft_strrchr(str, c));
+}
