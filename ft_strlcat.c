@@ -6,9 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 13:07:32 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 10:09:23 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 12:52:12 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 unsigned int	ft_strlcat(char	*dest, char *src, unsigned int size)
 {
@@ -39,8 +41,5 @@ unsigned int	ft_strlcat(char	*dest, char *src, unsigned int size)
 	return (len + j);
 }
 
-int main()
-{
-	
-}
+
 

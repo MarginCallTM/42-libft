@@ -6,12 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 14:52:31 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:03:17 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/11 12:51:09 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:11:07 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:10:08 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/11 12:52:39 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:35:07 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 17:05:49 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/11 12:50:04 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_is_alpha(int c)
 {
@@ -22,8 +21,8 @@ int	ft_is_alpha(int c)
 	return (0);
 }
 
-int main(void)
+/*int main(void)
 {
 	printf("%d", ft_is_alpha(8));
 	return (0);
-}
+}*/

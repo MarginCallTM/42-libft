@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:35:51 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 17:57:05 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/11 12:53:15 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *big , const char *little , size_t  len)
 {
@@ -36,10 +36,10 @@ char *ft_strnstr(const char *big , const char *little , size_t  len)
 	return (NULL);
 }
 
-int main(void)
+/*int main(void)
 {
 	char	little[] = "my";
 	char	big[] = "Welcome to my world";
 
 	printf("%s", ft_strnstr(big, little, 18));
-}
+}*/

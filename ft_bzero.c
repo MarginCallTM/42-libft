@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:43:43 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 10:26:37 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/11 12:49:16 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -27,7 +26,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-int main(void)
+/*int main(void)
 {
 	int     i;
 
@@ -42,4 +41,4 @@ int main(void)
 		i++;
 	}
 	
-}
+}*/

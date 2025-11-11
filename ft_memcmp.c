@@ -6,11 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:44:57 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 14:28:49 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 12:51:04 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp( const void *ptr1, const void *ptr2, size_t size )
 {
@@ -36,10 +36,10 @@ int ft_memcmp( const void *ptr1, const void *ptr2, size_t size )
 }
 
 
-int main(void)
+/*int main(void)
 {
     int ptr1 [] = { 52, 85, 20, 63, 21 };
     int ptr2 [] = { 54, 85, 20, 63, 21 };
 
 	printf("%i", ft_memcmp(ptr1, ptr2, 5 * sizeof(int)));
-}
+}*/

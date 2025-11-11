@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:05:01 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 13:41:42 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 12:50:50 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ nous devons aussi spécifier à la fonction la taille du bloc
 de mémoire dans lequel réaliser la recherche.
 */
 
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memchr( const void *ptr, int c, size_t size )
 {
@@ -39,7 +39,7 @@ void *ft_memchr( const void *ptr, int c, size_t size )
 	return (NULL);
 }
 
-int main(void)
+/*int main(void)
 {
 	char	data[] = {'a', 'b', 'c', 'd','e', 'f'};
 
@@ -53,4 +53,4 @@ int main(void)
 	{
 		printf("Non trouver");
 	}
-}
+}*/

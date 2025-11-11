@@ -6,12 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:44:15 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:01:37 by acombier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/11 12:50:25 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_is_digit(int c)
 {

@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 10:07:08 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/11 10:33:30 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/11 12:49:33 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-void	ft_bzero(void *s, size_t n);
+#include "libft.h"
 
 void *ft_calloc(size_t count, size_t size)
 {
@@ -29,7 +26,7 @@ void *ft_calloc(size_t count, size_t size)
     return (tmp);
 }
 
-int main(void)
+/*int main(void)
 {
     int *tab;
     int i;
@@ -52,4 +49,4 @@ int main(void)
     
     free(tab);
     return (0);
-}
+}*/

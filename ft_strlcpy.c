@@ -6,11 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 12:45:01 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/09 12:54:04 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 12:52:35 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -35,8 +35,7 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
 	return (len);
 }
 
-
-int main(void)
+/*int main(void)
 {
 	char	dest[30] = "Hello world";
 	char	src[30] = "This is my town";
@@ -45,4 +44,4 @@ int main(void)
 
 	printf("%s", dest);
 	return (0);
-}
+}*/

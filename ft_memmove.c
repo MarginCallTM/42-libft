@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:32:53 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/10 19:04:22 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/11 12:59:02 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -46,7 +44,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int main(void)
+/*int main(void)
 {
 	char data[] = "123456789";
 
@@ -62,5 +60,5 @@ int main(void)
 	printf("Résultat 2 : %s\n", data); // doit afficher "345676789"
 
 	return 0;
-}
+}*/
 
