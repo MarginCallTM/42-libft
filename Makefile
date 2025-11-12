@@ -32,6 +32,8 @@ OBJECTS = $(SOURCES:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
+all : $(NAME)
+
 # Règle principale (construction de la lib)
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
@@ -50,3 +52,5 @@ fclean: clean
 
 # Recompilation totale
 re: fclean $(NAME)
+
+.PHONY: all re fclean clean

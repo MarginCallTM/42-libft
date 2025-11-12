@@ -6,19 +6,18 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:02:20 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:53:41 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:51:33 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if(c >= 65 && c <= 90)
+	if (c >= 65 && c <= 90)
 	{
 		c += 32;
 	}
-
 	return (c);
 }
 

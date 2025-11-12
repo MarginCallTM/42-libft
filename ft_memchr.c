@@ -6,11 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:05:01 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:50:50 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:52:05 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Recherche la première occurence d'une valeur typée int, 
+/*Recherche la première occurence d'une valeur typée int,
 mais interprétée en tant que char, dans un bloc de mémoire.
 Comme on traite un bloc de mémoire et non
 pas une chaîne de caractères AZT (à zéro terminal),
@@ -20,19 +20,18 @@ de mémoire dans lequel réaliser la recherche.
 
 #include "libft.h"
 
-void *ft_memchr( const void *ptr, int c, size_t size )
+void	*ft_memchr(const void *ptr, int c, size_t size)
 {
-	size_t	i;
-	i = 0;
-	
+	size_t			i;
 	unsigned char	*p;
-	p = (unsigned char *)ptr;
 
-	while(i < size)
+	i = 0;
+	p = (unsigned char *)ptr;
+	while (i < size)
 	{
-		if(p[i] == (unsigned char)c)
+		if (p[i] == (unsigned char)c)
 		{
-			return(p + i);
+			return (p + i);
 		}
 		i++;
 	}

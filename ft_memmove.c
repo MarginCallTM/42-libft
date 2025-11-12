@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:32:53 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:59:02 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:30:01 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,19 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t		i;
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	i = 0;
-	unsigned char	*d;
-	d = (unsigned char *) dest;
-	const unsigned char	*s;
-	s = (const unsigned char *) src;
-
-	if (!dest || !src)
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (!dest && !src)
 		return (dest);
-	if (d > s && d < s + n)
+	if (src <= dest)
 	{
-		while (n > 0)
-		{
-			n--;
+		while (n-- > 0)
 			d[n] = s[n];
-		}
 	}
 	else
 	{
@@ -59,6 +55,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	ft_memmove(data, data + 2, 5);
 	printf("Résultat 2 : %s\n", data); // doit afficher "345676789"
 
-	return 0;
+	return (0);
 }*/
-

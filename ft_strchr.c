@@ -6,30 +6,30 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:12:22 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:51:50 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:51:53 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
-{	
+{
 	int	i;
-	
+
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if(str[i] == (char)c)
+		if (str[i] == (char)c)
 		{
 			return ((char *)(str + i));
 		}
 		i++;
 	}
-	if(c == '\0')
+	if (c == '\0')
 	{
 		return ((char *)(str + i));
 	}
-	return(NULL);
+	return (NULL);
 }
 
 /*int main(void)
@@ -39,4 +39,3 @@ char	*ft_strchr(const char *str, int c)
 
 	printf("%s", ft_strchr(str, c));
 }*/
-

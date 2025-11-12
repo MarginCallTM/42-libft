@@ -6,19 +6,18 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 13:26:26 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:53:52 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:51:20 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-	if(c >= 97 && c <= 122)
+	if (c >= 97 && c <= 122)
 	{
 		c -= 32;
 	}
-
 	return (c);
 }
 

@@ -6,23 +6,21 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:11:07 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:52:39 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/11 14:06:35 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-
 	while (str[i])
 	{
 		i++;
 	}
-
 	return (i);
 }
 
