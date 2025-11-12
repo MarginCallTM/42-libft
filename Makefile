@@ -24,9 +24,13 @@ SOURCES =   ft_atoi.c \
             ft_strrchr.c \
             ft_tolower.c \
             ft_toupper.c
+            ft_strdup.c
 
 # Génération automatique des fichiers objets correspondants (.o)
 OBJECTS = $(SOURCES:.c=.o)
+
+BONUS			=	
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 # Options de compilation
 CC = gcc

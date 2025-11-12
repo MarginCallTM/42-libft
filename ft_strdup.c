@@ -1,3 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/12 16:48:03 by adriencombi       #+#    #+#             */
+/*   Updated: 2025/11/12 16:59:45 by adriencombi      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+//#include <stdio.h>
+
 char	*ft_strdup(const char *src)
 {
 	int		i;
@@ -23,9 +38,9 @@ char	*ft_strdup(const char *src)
 
 /*int main(void)
 {
-	char	src[] = "Hello 42";
+	char	dest[] = "Hello 42";
 
-	printf("%s", ft_strdup(src));
+	printf("%s", ft_strdup(dest));
 
 	return (0);
 }*/
