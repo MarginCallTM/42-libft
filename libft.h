@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:22:37 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 15:34:47 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:56:21 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isascii(int c);
 
 int		ft_isprint(int c);
 
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 
 void	*ft_memset(void *str, int c, size_t n);
 
@@ -37,7 +37,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
-size_t	ft_strlcat(char *dest, char *src, unsigned int size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 int		ft_toupper(int c);
 

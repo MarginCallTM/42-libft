@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:33:38 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 13:51:36 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/12 12:00:50 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,17 @@ char	*ft_strrchr(const char *str, int c)
 	int	i;
 
 	i = 0;
+	if (!str)
+	{
+		return (NULL);
+	}
+	while (str[i] != '\0')
+	{
+		i++;
+	}
 	if (c == '\0')
 	{
 		return ((char *)(str + i));
-	}
-	while (str[i])
-	{
-		i++;
 	}
 	while (i >= 0)
 	{

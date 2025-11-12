@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:50:51 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 13:51:41 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:14:21 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t length)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && i < length && s1[i] != '\0')
+	while (i < length && s1[i]
+		&& (const unsigned char)s1[i] == (const unsigned char)s2[i])
 	{
 		i++;
 	}
@@ -25,7 +26,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t length)
 	{
 		return (0);
 	}
-	return (s1[i] - s2[i]);
+	return ((const unsigned char)s1[i] - (const unsigned char)s2[i]);
 }
 
 /*int main(void)
