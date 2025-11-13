@@ -28,6 +28,8 @@ SOURCES =   ft_atoi.c \
             ft_substr.c \
             ft_strjoin.c \
             ft_strtrim.c \
+            ft_split.c \
+            
 
 # Génération automatique des fichiers objets correspondants (.o)
 OBJECTS = $(SOURCES:.c=.o)

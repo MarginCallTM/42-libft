@@ -6,7 +6,7 @@
 /*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:22:37 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/12 19:00:07 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/12 20:48:11 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ char	*ft_strdup(const char *src);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 char    *ft_strjoin(char const *s1, char const *s2);
+
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif
