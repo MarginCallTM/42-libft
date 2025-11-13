@@ -3,91 +3,69 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:12:21 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/12 20:45:01 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/13 14:28:31 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-size_t	ft_strlen(const char *str)
+int	ft_is_in_set(char c, const char *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (set[i])
 	{
+		if (c == set[i])
+		{
+			return (1);
+		}
 		i++;
 	}
-	return (i);
+	return (0);
 }
 
-
-
-int ft_is_in_set(char c, const char * set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t  i;
+	size_t	start;
+	size_t	end;
+	char	*strtrim;
+	size_t	i;
 
-    i = 0;
-
-    while(set[i])
-    {
-        if(c == set[i])
-        {
-            return (1);
-        }
-        i++;
-    }
-    return (0);
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_is_in_set(s1[start], set))
+	{
+		start++;
+	}
+	end = ft_strlen(s1);
+	while (end > start && ft_is_in_set(s1[end - 1], set))
+	{
+		end--;
+	}
+	strtrim = malloc(sizeof(*s1) * (end - start + 1));
+	if (!strtrim)
+		return (NULL);
+	i = 0;
+	while (start < end)
+	{
+		strtrim[i] = s1[start++];
+		i++;
+	}
+	strtrim[i] = '\0';
+	return (strtrim);
 }
 
-
-char    *ft_strtrim(char const *s1, char const *set)
+/*int	main(void)
 {
-    if(!s1 || !set)
-        return (NULL);
+	char s1[] = "    g   manger     f   ";
 
-    size_t  start;
+	char *trim = ft_strtrim(s1, " ");
 
-    start = 0;
-    
-    while(s1[start] && ft_is_in_set(s1[start], set))
-    {
-        start++;
-    }
-
-    size_t  end;
-
-    end = ft_strlen(s1);
-
-    while(end > start && ft_is_in_set(s1[end - 1], set))
-    {
-        end--;
-    }
-    char    *strtrim = malloc(sizeof(*s1) * (end - start + 1));
-    if(!strtrim)
-        return (NULL);
-
-    size_t  i;
-    i = 0;
-    while(start < end)
-    {
-        strtrim[i] = s1[start++];
-        i++;
-    }
-    strtrim[i] = '\0';
-    
-    return (strtrim);
-}
-
-int main(void)
-{
-    char    s1[] = "    g   manger     f   ";
-
-    char    *trim = ft_strtrim(s1, " ");
-
-    printf("%s", trim);
-}
+	printf("%s", trim);
+}*/

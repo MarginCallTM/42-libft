@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/13 12:15:06 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/13 15:49:50 by acombier         ###   ########.fr       */
+/*   Created: 2025/11/13 14:00:05 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/13 15:03:25 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
+// Count word
 int	ft_count_word(const char *s, char c)
 {
 	size_t	i;
@@ -22,10 +23,10 @@ int	ft_count_word(const char *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] && s[i] != c)
 		{
 			count++;
-			while (s[i] && s[i] != c)
+			while (s[i] != c)
 			{
 				i++;
 			}
@@ -37,38 +38,38 @@ int	ft_count_word(const char *s, char c)
 	}
 	return (count);
 }
-
-int	ft_allocate_sub_tab(char **tab, const char *s, char c)
+// Allocate tab
+void	ft_allocate_tab(char **tab, const char *s, char c)
 {
-	size_t	lword;
+	size_t	lenword;
 	int		i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	lword = 0;
+	lenword = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] && s[i] != c)
 		{
-			while (s[i] && s[i] != c)
+			while (s[i] != c)
 			{
-				lword++;
+				lenword++;
 				i++;
 			}
-			tab[j] = malloc(sizeof(char) * (lword + 1));
-			if (!tab[j])
-				return (-1);
+			tab[j] = malloc(sizeof(char) * (lenword + 1));
 			j++;
-			lword = 0;
+			lenword = 0;
 		}
 		else
+		{
 			i++;
+		}
 	}
-	return (0);
 }
 
-void	ft_fill_sub_tab(char **tab, const char *s, char c)
+// fill the tab
+void	ft_fill_tab(char **tab, const char *s, char c)
 {
 	int	i;
 	int	j;
@@ -79,9 +80,9 @@ void	ft_fill_sub_tab(char **tab, const char *s, char c)
 	k = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] && s[i] != c)
 		{
-			while (s[i] && s[i] != c)
+			while (s[i] != c)
 			{
 				tab[j][k] = s[i];
 				k++;
@@ -97,61 +98,43 @@ void	ft_fill_sub_tab(char **tab, const char *s, char c)
 	}
 }
 
-void	free_tab(char **tab)
-{
-	int	i;
-
-	if (!tab)
-	{
-		return (NULL);
-	}
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-}
-
+// ft_split
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		nb_word;
 
 	if (!s)
+	{
 		return (NULL);
+	}
 	nb_word = ft_count_word(s, c);
 	tab = malloc(sizeof(char *) * (nb_word + 1));
 	if (!tab)
 		return (NULL);
 	tab[nb_word] = NULL;
-	if(ft_allocate_sub_tab(tab, s, c) == -1)
-	{
-		free_tab(tab);
-		return(NULL);
-	}
-	ft_allocate_sub_tab(tab, s, c);
-	ft_fill_sub_tab(tab, s, c);
+	ft_allocate_tab(tab, s, c);
+	ft_fill_tab(tab, s, c);
 	return (tab);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	char s[] = "------He---ffd---hello--";
+
+	char s[] = "---bro---whats---up---mate--";
 
 	char **result;
 
 	result = ft_split(s, '-');
 
-	while(result[i])
+	while (result[i])
 	{
-		printf("%s\n",  result[i]);
+		printf("%s\n", result[i]);
 		i++;
 	}
 
 	return (0);
-}*/
+}
