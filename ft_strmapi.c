@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/13 14:36:02 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/14 10:48:19 by adriencombi      ###   ########.fr       */
+/*   Created: 2025/11/13 20:10:34 by adriencombi       #+#    #+#             */
+/*   Updated: 2025/11/14 10:48:03 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,66 +14,64 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	ft_intlen(long n)
+char	to_uppercase(unsigned int i, char c)
 {
-	int	len;
-
-	if (n == 0)
-	{
-		return (1);
-	}
-	len = 0;
-	if (n < 0)
-	{
-		len++;
-		n *= -1;
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		len++;
-	}
-	return (len);
+	if(c >= 'a' && c <= 'z')
+		return (c -= 32);
+	else
+		return (c);
 }
-void	rec_itoa(long nb, char *str, long *i)
+size_t	ft_strlen(const char *str)
 {
-	if(nb >= 10)
-		rec_itoa(nb / 10, str, i);
-	str[*i] = nb % 10 + '0';
-	(*i)++;
-}
+	int	i;
 
-char	*ft_itoa(int n)
-{
-	int long nb;
-	int long len;
-	long	i;
-	
 	i = 0;
-	nb = n;
-	len = ft_intlen(nb);
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}
+
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	if(!s || !f)
+	{
+		return(NULL);
+	}
+	
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen(s);
+
 	char	*str = malloc(sizeof(char) * (len + 1));
 	if(!str)
 		return (NULL);
-		str[len] = '\0';	
-	if(nb < 0)
+	
+	i = 0;
+	while(s[i])
 	{
-		nb *= -1;
-		str[0] = '-';
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	if(nb == 0)
-	{
-		str[0] = '0';
-		str[1] = '\0';
-		return(str);
-	}
-	rec_itoa(nb, str, &i);
+	str[len] = '\0';
+
 	return (str);
 }
 
 int main(void)
 {
-	printf("%s", ft_itoa(730));
+	const char *original = "hello world";
+
+	char *result;
+
+	result = ft_strmapi(original, to_uppercase);
+
+	if(result)
+		printf("%s\n", result);
+	else
+		printf("Allocation failed");
 
 	return (0);
 }
