@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:15:06 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/13 15:49:50 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:32:43 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,12 @@ void	ft_fill_sub_tab(char **tab, const char *s, char c)
 				k++;
 				i++;
 			}
+			tab[j][k] = '\0';
 			j++;
 			k = 0;
 		}
 		else
-		{
 			i++;
-		}
 	}
 }
 
@@ -103,7 +102,7 @@ void	free_tab(char **tab)
 
 	if (!tab)
 	{
-		return (NULL);
+		return ;
 	}
 	i = 0;
 	while (tab[i])
@@ -126,12 +125,11 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	tab[nb_word] = NULL;
-	if(ft_allocate_sub_tab(tab, s, c) == -1)
+	if (ft_allocate_sub_tab(tab, s, c) == -1)
 	{
 		free_tab(tab);
-		return(NULL);
+		return (NULL);
 	}
-	ft_allocate_sub_tab(tab, s, c);
 	ft_fill_sub_tab(tab, s, c);
 	return (tab);
 }

@@ -6,12 +6,11 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:12:21 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/13 14:28:31 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:16:40 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_is_in_set(char c, const char *set)
 {
@@ -29,12 +28,26 @@ int	ft_is_in_set(char c, const char *set)
 	return (0);
 }
 
+static void	ft_strncpy_trim(char *dest, const char *src, size_t start,
+		size_t end)
+{
+	size_t	i;
+
+	i = 0;
+	while (start < end)
+	{
+		dest[i] = src[start];
+		start++;
+		i++;
+	}
+	dest[i] = '\0';
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
 	char	*strtrim;
-	size_t	i;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -51,13 +64,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	strtrim = malloc(sizeof(*s1) * (end - start + 1));
 	if (!strtrim)
 		return (NULL);
-	i = 0;
-	while (start < end)
-	{
-		strtrim[i] = s1[start++];
-		i++;
-	}
-	strtrim[i] = '\0';
+	ft_strncpy_trim(strtrim, s1, start, end);
 	return (strtrim);
 }
 

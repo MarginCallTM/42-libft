@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 14:36:02 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/14 10:48:19 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/14 16:29:50 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_intlen(long n)
@@ -35,45 +33,47 @@ int	ft_intlen(long n)
 	}
 	return (len);
 }
-void	rec_itoa(long nb, char *str, long *i)
+
+void	ft_itoa_reverse_print(long nb, char *str, long *len)
 {
-	if(nb >= 10)
-		rec_itoa(nb / 10, str, i);
-	str[*i] = nb % 10 + '0';
-	(*i)++;
+	while (nb > 0)
+	{
+		str[*len] = nb % 10 + '0';
+		(*len)--;
+		nb /= 10;
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	int long nb;
-	int long len;
-	long	i;
-	
-	i = 0;
+	long		nb;
+	int long	len;
+	char		*str;
+
 	nb = n;
 	len = ft_intlen(nb);
-	char	*str = malloc(sizeof(char) * (len + 1));
-	if(!str)
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
-		str[len] = '\0';	
-	if(nb < 0)
+	str[len] = '\0';
+	len--;
+	if (nb < 0)
 	{
 		nb *= -1;
 		str[0] = '-';
 	}
-	if(nb == 0)
+	if (nb == 0)
 	{
 		str[0] = '0';
 		str[1] = '\0';
-		return(str);
+		return (str);
 	}
-	rec_itoa(nb, str, &i);
+	ft_itoa_reverse_print(nb, str, &len);
 	return (str);
 }
-
-int main(void)
+/*int main(void)
 {
-	printf("%s", ft_itoa(730));
+	printf("%s", ft_itoa(-2147483648));
 
 	return (0);
-}
+}*/

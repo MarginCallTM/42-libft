@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:35:51 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/12 14:38:39 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/14 17:35:46 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		j = 0;
 		while (i + j < len && big[i + j] == little[j] && little[j] && big[i
-			+ j])
+				+ j])
 		{
 			j++;
 		}
