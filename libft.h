@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:22:37 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/14 14:10:06 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:13:19 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+	void	*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_is_alpha(int c);
 
@@ -81,5 +87,17 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd);
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+int	ft_lstsize(t_list *lst);
+
+t_list	*ft_lstlast(t_list *lst);
+
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+void	ft_lstdelone(t_list *lst, void(*del)(void *));
+
+void	ft_lstiter(t_list *lst, void(*f)(void *));
 
 #endif
