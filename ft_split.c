@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:15:06 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/14 18:32:43 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:10:28 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,14 @@ int	ft_count_word(const char *s, char c)
 	return (count);
 }
 
+static int	ft_alloc_word(char **tab, int j, size_t lword)
+{
+	tab[j] = malloc(sizeof(char) * (lword + 1));
+	if (!tab[j])
+		return (-1);
+	return (0);
+}
+
 int	ft_allocate_sub_tab(char **tab, const char *s, char c)
 {
 	size_t	lword;
@@ -56,8 +64,7 @@ int	ft_allocate_sub_tab(char **tab, const char *s, char c)
 				lword++;
 				i++;
 			}
-			tab[j] = malloc(sizeof(char) * (lword + 1));
-			if (!tab[j])
+			if (ft_alloc_word(tab, j, lword) == -1)
 				return (-1);
 			j++;
 			lword = 0;

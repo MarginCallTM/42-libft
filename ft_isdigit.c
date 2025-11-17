@@ -6,13 +6,13 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:44:15 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 12:50:25 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:55:39 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_digit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{

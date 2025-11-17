@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:00:38 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/17 12:14:27 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:59:56 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *temp;
+	t_list	*temp;
 
 	if (!lst || !new)
 		return ;
-
 	if (*lst == NULL)
 	{
 		*lst = new;

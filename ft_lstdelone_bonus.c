@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:21:23 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/17 12:14:34 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:00:42 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
 		return ;
-
 	del(lst->content);
 	free(lst);
 }
