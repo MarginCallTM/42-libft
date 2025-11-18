@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 18:20:09 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/11 15:34:07 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:26:30 by adriencombi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+// Pass tab space + and -
 int	ft_atoi(const char *str)
 {
 	unsigned int	i;
