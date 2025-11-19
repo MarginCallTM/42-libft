@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:43:43 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/17 18:27:06 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/18 10:59:53 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	ft_bzero(void *s, size_t n)
 {

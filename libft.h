@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:22:37 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/18 09:55:37 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/18 11:13:55 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char				*ft_strnstr(const char *big, const char *little,
 
 int					ft_atoi(const char *str);
 
-void				*ft_calloc(size_t count, size_t size);
+void				*ft_calloc(size_t nmemb, size_t size);
 
 char				*ft_strdup(const char *src);
 
@@ -89,7 +89,7 @@ void				ft_putstr_fd(char *s, int fd);
 
 void				ft_putendl_fd(char *s, int fd);
 
-void    ft_putnbr_fd(int   n, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 t_list				*ft_lstnew(void *content);
 

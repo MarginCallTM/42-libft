@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:48:03 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/12 16:59:45 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/19 14:23:24 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(const char *src)
 	{
 		i++;
 	}
-	dest = malloc(sizeof(char) * i + 1);
+	dest = malloc(sizeof(char) * (i + 1));
 	if (dest == NULL)
 		return (NULL);
 	i = 0;

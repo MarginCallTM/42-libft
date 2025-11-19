@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriencombier <adriencombier@student.42    +#+  +:+       +#+        */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 18:20:09 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/17 18:26:30 by adriencombi      ###   ########.fr       */
+/*   Updated: 2025/11/19 14:22:44 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 // Pass tab space + and -
 int	ft_atoi(const char *str)
@@ -52,3 +51,4 @@ int	ft_atoi(const char *str)
 	printf("Result : %d\n", ft_atoi("   +--++--+--0009"));
 		return (0);
 }*/
+// Call vrai atoi et cmp avec int overflow

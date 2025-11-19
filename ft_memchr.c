@@ -6,17 +6,9 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:05:01 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/11 13:52:05 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:15:32 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Recherche la première occurence d'une valeur typée int,
-mais interprétée en tant que char, dans un bloc de mémoire.
-Comme on traite un bloc de mémoire et non
-pas une chaîne de caractères AZT (à zéro terminal),
-nous devons aussi spécifier à la fonction la taille du bloc
-de mémoire dans lequel réaliser la recherche.
-*/
 
 #include "libft.h"
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaad_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:01:23 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/17 12:14:22 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:27:03 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
+	if (!new)
 		return ;
 	new->next = *lst;
 	*lst = new;

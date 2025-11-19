@@ -6,7 +6,7 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 14:36:02 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/14 16:29:50 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:25:13 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ void	ft_itoa_reverse_print(long nb, char *str, long *len)
 
 char	*ft_itoa(int n)
 {
-	long		nb;
-	int long	len;
-	char		*str;
+	long	nb;
+	long	len;
+	char	*str;
 
 	nb = n;
 	len = ft_intlen(nb);

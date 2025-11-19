@@ -1,15 +1,26 @@
-#include <stdlib.h>
-#include <stdio.h>
- 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/18 11:00:29 by acombier          #+#    #+#             */
+/*   Updated: 2025/11/18 11:00:44 by acombier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 static int	is_sep(char c, char delim)
 {
 	return (c == delim);
 }
- 
+
 static int	count_words(const char *str, char delim)
 {
 	int	count;
- 
+
 	count = 0;
 	while (*str)
 	{
@@ -24,13 +35,13 @@ static int	count_words(const char *str, char delim)
 	}
 	return (count);
 }
- 
+
 static char	*alloc_word(const char *str, char delim)
 {
 	int		len;
 	char	*word;
 	int		i;
- 
+
 	len = 0;
 	i = 0;
 	while (str[len] && !is_sep(str[len], delim))
@@ -46,19 +57,19 @@ static char	*alloc_word(const char *str, char delim)
 	word[len] = '\0';
 	return (word);
 }
- 
+
 static void	free_all(char **result, int i)
 {
 	while (i >= 0)
 		free(result[i--]);
 	free(result);
 }
- 
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		i;
- 
+
 	i = 0;
 	if (!s)
 		return (NULL);
@@ -82,7 +93,7 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
-int	main(void)
+/*int	main(void)
 {
 	int	i;
 
@@ -100,4 +111,4 @@ int	main(void)
 	}
 
 	return (0);
-}
+}*/
