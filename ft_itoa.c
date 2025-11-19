@@ -6,13 +6,13 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 14:36:02 by acombier          #+#    #+#             */
-/*   Updated: 2025/11/19 14:25:13 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:11:45 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(long n)
+static int	ft_intlen(long n)
 {
 	int	len;
 
@@ -34,7 +34,7 @@ int	ft_intlen(long n)
 	return (len);
 }
 
-void	ft_itoa_reverse_print(long nb, char *str, long *len)
+static void	ft_itoa_reverse_print(long nb, char *str, long *len)
 {
 	while (nb > 0)
 	{

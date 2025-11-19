@@ -6,13 +6,13 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:12:21 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/14 18:16:40 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:13:59 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_in_set(char c, const char *set)
+int static	ft_is_in_set(char c, const char *set)
 {
 	size_t	i;
 

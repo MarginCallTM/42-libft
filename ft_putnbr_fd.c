@@ -6,13 +6,13 @@
 /*   By: acombier <acombier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 08:59:11 by adriencombi       #+#    #+#             */
-/*   Updated: 2025/11/18 10:54:09 by acombier         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:12:42 by acombier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c, int fd)
+static void	ft_putchar(char c, int fd)
 {
 	write(fd, &c, 1);
 }
